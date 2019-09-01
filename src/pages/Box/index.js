@@ -24,7 +24,7 @@ export default class Box extends Component {
 
     subscribeToNewFiles = () => {
         const box = this.props.match.params.id;
-        const io = socket("https://skysy-backend.herokuapp.com");
+        const io = socket("https://skysy-backend1.herokuapp.com");
 
         io.emit("connectRoom", box);
         io.on("file", data => {
